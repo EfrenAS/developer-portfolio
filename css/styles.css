@@ -1,0 +1,102 @@
+:root{
+  --white: #ffffff;
+  --black: #212121;
+  --primary-color: #ffc107;
+  --secondary-color: #0097a7;
+  --gray: #757575;
+}
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  font-size: 16px;/* 1rem = 10px */
+  font-family: 'Krub', Arial, Helvetica, sans-serif;
+}
+
+.title{
+  text-align: center;
+  font-size: 3.8rem;
+}
+
+.title span{
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.background-nav {
+  background-color: var(--secondary-color);
+}
+
+.primary-nav{
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-nav a {
+  display: block;
+  color: var(--white);
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.primary-nav a:hover{
+  background-color: var(--primary-color);
+  color: var(--black);
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+}
+
+.content-hero {
+  background-color: rgba(0, 0, 0, .7); /* last syntax */
+  background-color: rgb(0 0 0 / 70%);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/*
+*   Is a standard convention displays when use media queries
+*/
+
+/* For smartphones */
+@media (min-width: 480px) {
+  .primary-nav {
+    flex-direction: row;
+    justify-content: space-between;
+   }
+}
+
+/* For tablets or ipads */
+@media (min-width: 768px) {
+
+}
+
+/* For laptops and PC */
+@media (min-width: 1140px) {
+     
+}
+
+/* For TV's */
+@media (min-width: 1400px) {
+     
+}
