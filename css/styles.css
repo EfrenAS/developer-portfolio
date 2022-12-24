@@ -49,6 +49,7 @@ h1,h2,h3 {
 
 .button {
   background-color: var(--secondary-color);
+  border: none;
   border-radius: 0.5rem;
   color: var(--white);
   font-size: 2rem;
@@ -61,6 +62,10 @@ h1,h2,h3 {
   width: 90%;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .shadow {
   -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
   -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
@@ -69,6 +74,22 @@ h1,h2,h3 {
   background-color: var(--white);
   padding: 2rem;
 }
+
+
+/* Utilities */
+.d-flex {
+  display: flex;
+}
+
+.jc-right {
+  justify-content: flex-end;
+}
+
+/* Utilities */
+.w-sm-100 {
+  width: 100%;
+}
+
 
 .background-nav {
   background-color: var(--secondary-color);
@@ -125,13 +146,11 @@ h1,h2,h3 {
   align-items: flex-end;
 }
 
-
 .service {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
-
 
 .service h3 {
   color: var(--secondary-color);
@@ -152,6 +171,55 @@ h1,h2,h3 {
   width: 15rem;
 }
 
+.contact-form {
+  background-color: var(--gray);
+  border-radius: 1rem;
+  margin: 0 auto;
+  padding: 2rem;
+  width: min( 60rem, 100%);
+}
+
+.contact-form fieldset {
+  border: none;
+}
+
+.contact-form legend {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  color: var(--white);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.field input,
+.field textarea {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.field textarea {
+  height: 20rem;
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+}
 
 /*
 *   Is a standard convention displays when use media queries
@@ -171,6 +239,10 @@ h1,h2,h3 {
     width: auto;
   }
 
+  .w-sm-100 {
+    width: auto;
+  }
+
   /* services */
   /*
   * I used CSS Grid
@@ -179,6 +251,18 @@ h1,h2,h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
+  }
+
+  .fields-container {
+    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 20rem;
+  }
+
+  .field:nth-child(3),
+  .field:nth-child(4) {
+    grid-column: 1 / 3;
   }
 }
 
