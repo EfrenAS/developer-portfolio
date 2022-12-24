@@ -125,6 +125,34 @@ h1,h2,h3 {
   align-items: flex-end;
 }
 
+
+.service {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.service h3 {
+  color: var(--secondary-color);
+  font-weight: normal;
+}
+
+.service p {
+  line-height: 2;
+}
+
+.service .icons {
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 15rem;
+  width: 15rem;
+}
+
+
 /*
 *   Is a standard convention displays when use media queries
 */
@@ -141,6 +169,16 @@ h1,h2,h3 {
 @media (min-width: 768px) {
   .button {
     width: auto;
+  }
+
+  /* services */
+  /*
+  * I used CSS Grid
+  */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
   }
 }
 
